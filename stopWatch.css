@@ -54,19 +54,23 @@ body {
 }
 
 .start-button {
-  background-color: #4caf50; /* Soft green */
+  border: 1px solid var(--accent-color);
+  background-color: var(--background-color); /* Soft green */
 }
 
 .pause-button {
-  background-color: #f44336;
+  border: 1px solid var(--accent-color);
+  background-color: var(--background-color);
 }
 
 .reset-button {
-  background-color: #e25f08;
+  background-color: var(--background-color);
+  border: 1px solid var(--accent-color);
 }
 
 .lap-button {
-  background-color: #2196f3; /* Soft blue */
+  background-color: var(--background-color);
+  border: 1px solid var(--accent-color);
 }
 
 .button:hover {
@@ -81,7 +85,7 @@ body {
   border-radius: 8px;
   overflow-y: auto;
   max-height: 200px;
-  color: var(--primary-color); /* Dark gray text color */
+  color: var(--accent-color); /* Dark gray text color */
 }
 
 .lap-item {
