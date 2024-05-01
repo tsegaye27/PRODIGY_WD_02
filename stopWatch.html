@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch App</title>
     <link rel="stylesheet" href="stopWatch.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
-    <!-- <div class="header">
-      <h1>Stopwatch</h1>
-    </div> -->
     <div class="stopwatch-container">
       <div id="display" class="stopwatch-display">00:00:00.00</div>
       <button
@@ -17,17 +18,17 @@
         class="button start-button"
         onclick="startStopwatch()"
       >
-        Start
+        <i class="fas fa-play"></i>
       </button>
       <button
         id="resetBtn"
         class="button reset-button"
         onclick="resetStopwatch()"
       >
-        Reset
+        <i class="fas fa-sync-alt"></i>
       </button>
       <button id="lapBtn" class="button lap-button" onclick="recordLap()">
-        Lap
+        <i class="fas fa-flag"></i>
       </button>
       <ul id="lapsList" class="laps-list"></ul>
     </div>
