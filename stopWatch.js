@@ -14,12 +14,14 @@ function startStopwatch() {
     }
     running = true;
     updateStopwatch();
-    document.getElementById("startBtn").innerText = "Stop";
+    document.getElementById("startBtn").innerHTML =
+      '<i class="fas fa-pause"></i>';
     toggleStopwatchBtnColor("start-button", "pause-button");
   } else {
     running = false;
     pausedTime = Date.now() - startTime;
-    document.getElementById("startBtn").innerText = "Play";
+    document.getElementById("startBtn").innerHTML =
+      '<i class="fas fa-play"></i>';
     toggleStopwatchBtnColor("pause-button", "start-button");
   }
 }
@@ -29,17 +31,11 @@ function toggleStopwatchBtnColor(firstClass, secondClass) {
   document.getElementById("startBtn").classList.add(secondClass);
 }
 
-function pauseStopwatch() {
-  running = false;
-  pausedTime = Date.now() - startTime;
-  document.getElementById("startBtn").innerText = "Resume";
-}
-
 function resetStopwatch() {
   running = false;
   pausedTime = 0;
   document.getElementById("display").innerText = "00:00:00.00";
-  document.getElementById("startBtn").innerText = "Start";
+  document.getElementById("startBtn").innerHTML = '<i class="fas fa-play"></i>';
   toggleStopwatchBtnColor("pause-button", "start-button");
   laps = [];
   updateLapsList();
